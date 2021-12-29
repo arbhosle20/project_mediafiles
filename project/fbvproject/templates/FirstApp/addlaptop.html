@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Add-Laptop</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="width:50%; color:#C70039; bgcolor=lightgreen" >
+        <form method="post" class="jumbotron" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type="submit" value="Add-Laptop" class="btn btn-success">
+        </form>
+    <a href="{% url 'show' %}"><button class="btn btn-primary">show-Laptop</button></a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title> Details Page</title>
+{% endblock %}
+{% block content %}
+<section class="vh-100" >
+<div class="container" >
+  <div class="jumbotron">
+  <figure class="figure">
+  <img src="/media/{{lap_object.picture}}" class="figure-img img-fluid rounded" alt="Avatar" >
+  <figcaption class="figure-caption">laptop Image</figcaption>
+  </figure>
+
+  <h6>Company Name : {{lap_object.company}}</h6>
+  <p class="text-muted">Model Name : {{lap_object.model_name}}</p>
+  <p class="text-muted">ROM : {{lap_object.rom}} </p>
+  <p class="text-muted">RAM : {{lap_object.ram}} </p>
+  <p class="text-muted">Processor : {{lap_object.processor}} </p>
+  <p class="text-muted">Price : {{lap_object.price}} </p>
+  <p class="text-muted">Weigth : {{lap_object.weigth}} </p>
+  <p>Open document <a href="/media/{{lap_object.document}}">click </a></p>
+ </div>
+</div>
+</section>
+
+{% endblock %}
